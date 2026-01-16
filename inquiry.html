@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Request Trade Account | SEM Spirits Distribution</title>
+    <meta name="description" content="Submit your trade partner inquiry to SEM Spirits. Licensed wholesalers, retailers, and restaurants can request access to our verified portal.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Age Gate Modal -->
+<div
+    id="sem-agegate"
+    class="agegate show"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="agegate-title"
+    aria-describedby="agegate-desc"
+    data-agegate="active"
+>
+    <div class="box" role="document">
+        <div class="kicker">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Age Verification Required</span>
+        </div>
+
+        <h3 id="agegate-title">You must be 21 or older to enter</h3>
+
+        <p id="agegate-desc">
+            This website contains information about alcohol products and is intended
+            for audiences of legal drinking age. Please confirm you are at least
+            21 years of age.
+        </p>
+
+        <form class="agegate-form" id="sem-agegate-form">
+            <div class="actions">
+                <button
+                    class="btn primary"
+                    type="button"
+                    id="agegate-confirm"
+                    onclick="confirmAge()"
+                >
+                    Yes, I am 21+
+                </button>
+                <button
+                    class="btn"
+                    type="button"
+                    id="agegate-deny"
+                    onclick="denyAge()"
+                >
+                    No, Exit Site
+                </button>
+            </div>
+
+            <p class="note">
+                By entering, you affirm you are of legal drinking age in your country
+                of residence and agree to our Terms of Service.
+            </p>
+        </form>
+    </div>
+</div>
+
+<!-- Background layers -->
+<div class="bg-img" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+
+<div class="wrap">
+    <header>
+        <a href="index.html" class="brand">
+            <img src="assets/images/logo.png" alt="SEM Spirits Logo" class="brand-logo">
+            <div>
+                <h1>SEM Spirits</h1>
+                <small>Premium Distribution</small>
+            </div>
+        </a>
+
+        <nav aria-label="Primary navigation">
+            <a class="pill" href="index.html#about">About</a>
+            <a class="pill" href="index.html#products">Products</a>
+            <a class="pill" href="index.html#trade">For Trade</a>
+            <a class="pill active" href="inquiry.html" aria-current="page">Request Account</a>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section class="page-hero">
+            <div class="kicker">
+                <span class="dot"></span>
+                <span>Verified Trade Portal</span>
+            </div>
+            <h2>Request a SEM Spirits Trade Account</h2>
+            <p>
+                Complete the form below to start the manual verification process. We review every
+                submission to confirm business licensing, territory eligibility, and compliance
+                with state alcohol regulations.
+            </p>
+            <div class="page-meta">
+                <span class="badge">2-3 business day review</span>
+                <span class="badge">Manual verification required</span>
+                <a class="pill" href="legal.html#privacy">Review Privacy Policy</a>
+            </div>
+        </section>
+
+        <section class="page-grid">
+            <article class="info-card">
+                <h3>How Verification Works</h3>
+                <ol class="info-steps">
+                    <li><strong>Submit inquiry</strong> with accurate business and licensing details.</li>
+                    <li><strong>Compliance review</strong> – our team validates permits, territory, and credentials.</li>
+                    <li><strong>Account creation</strong> – approved partners receive login credentials via email.</li>
+                </ol>
+                <div class="contact-panel">
+                    <h4>Need assistance?</h4>
+                    <p>Email <a href="mailto:trade@semspirits.com">trade@semspirits.com</a> or call (555) 123-4521 for support.</p>
+                </div>
+                <ul class="info-list">
+                    <li>Only licensed wholesalers, retailers, restaurants/bars, distributors, and qualified event venues are eligible.</li>
+                    <li>Individual consumers can inquire but will be tagged for future consumer releases.</li>
+                    <li>Providing complete details speeds up the verification turnaround.</li>
+                </ul>
+            </article>
+
+            <form class="form-card" id="trade-inquiry-form" novalidate>
+                <div class="form-grid">
+                    <label class="input-group">
+                        <span>First Name *</span>
+                        <input type="text" name="first_name" required placeholder="Jordan">
+                    </label>
+                    <label class="input-group">
+                        <span>Last Name *</span>
+                        <input type="text" name="last_name" required placeholder="Alemayehu">
+                    </label>
+                    <label class="input-group">
+                        <span>Business Name *</span>
+                        <input type="text" name="business_name" required placeholder="SEM Spirits Retail Partners">
+                    </label>
+                    <label class="input-group">
+                        <span>Email Address *</span>
+                        <input type="email" name="email" required placeholder="you@business.com">
+                    </label>
+                    <label class="input-group">
+                        <span>Phone (optional)</span>
+                        <input type="tel" name="phone" placeholder="(555) 000-1234">
+                    </label>
+                    <label class="input-group">
+                        <span>Business Type *</span>
+                        <select name="business_type" required>
+                            <option value="">Select type</option>
+                            <option>Wholesaler</option>
+                            <option>Retailer</option>
+                            <option>Restaurant/Bar</option>
+                            <option>Distributor</option>
+                            <option>Event Venue</option>
+                            <option>Individual/Other</option>
+                        </select>
+                    </label>
+                    <label class="input-group">
+                        <span>State *</span>
+                        <select name="state" required>
+                            <option value="">Select state</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </label>
+                </div>
+
+                <label class="input-group">
+                    <span>Inquiry Details *</span>
+                    <textarea name="message" rows="5" required placeholder="Tell us about your business, license details, and distribution needs."></textarea>
+                </label>
+
+                <div class="checkbox-row">
+                    <label class="checkbox">
+                        <input type="checkbox" name="tarik_interest">
+                        <span>I'm specifically interested in Tarik Areke</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="notify_online">
+                        <span>Notify me when online ordering is available</span>
+                    </label>
+                </div>
+
+                <p class="helper-text">
+                    By submitting this form you consent to SEM Spirits storing your information for the purpose of
+                    trade verification. See our <a href="legal.html#privacy">Privacy Policy</a> for details.
+                </p>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Submit Inquiry</button>
+                    <p class="helper-text subtle">You will also receive an automated confirmation email.</p>
+                </div>
+
+                <div class="form-status" id="form-status" role="status" aria-live="polite" hidden>
+                    Thank you — your inquiry has been received. Expect a response within 2-3 business days.
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/images/logo.png" alt="SEM Spirits" class="footer-logo">
+                <div>
+                    <strong>SEM Spirits Distribution</strong>
+                    <small>Premium Ethiopian Spirits</small>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Trade Portal</h4>
+                    <ul>
+                        <li><a href="inquiry.html" aria-current="page">Request Account</a></li>
+                        <li><a href="index.html#trade">Verification Process</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="legal.html#terms">Terms of Service</a></li>
+                        <li><a href="legal.html#privacy">Privacy Policy</a></li>
+                        <li><a href="legal.html#compliance">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://www.responsibility.org" target="_blank">Responsible Drinking</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 SEM Spirits Distribution. All rights reserved.</p>
+            <p class="footer-disclaimer">
+                Must be 21+ to access this site. SEM Spirits promotes responsible drinking.
+            </p>
+        </div>
+    </footer>
+</div>
+
+<script src="js/agegate.js"></script>
+<script src="js/site.js"></script>
+
+</body>
+</html>

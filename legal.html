@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Legal & Compliance | SEM Spirits Distribution</title>
+    <meta name="description" content="Review SEM Spirits Distribution legal policies, including terms of service, privacy, and compliance commitments for the verified trade portal.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Age Gate Modal -->
+<div
+    id="sem-agegate"
+    class="agegate show"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="agegate-title"
+    aria-describedby="agegate-desc"
+    data-agegate="active"
+>
+    <div class="box" role="document">
+        <div class="kicker">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Age Verification Required</span>
+        </div>
+
+        <h3 id="agegate-title">You must be 21 or older to enter</h3>
+
+        <p id="agegate-desc">
+            This website contains information about alcohol products and is intended
+            for audiences of legal drinking age. Please confirm you are at least
+            21 years of age.
+        </p>
+
+        <form class="agegate-form" id="sem-agegate-form">
+            <div class="actions">
+                <button
+                    class="btn primary"
+                    type="button"
+                    id="agegate-confirm"
+                    onclick="confirmAge()"
+                >
+                    Yes, I am 21+
+                </button>
+                <button
+                    class="btn"
+                    type="button"
+                    id="agegate-deny"
+                    onclick="denyAge()"
+                >
+                    No, Exit Site
+                </button>
+            </div>
+
+            <p class="note">
+                By entering, you affirm you are of legal drinking age in your country
+                of residence and agree to our Terms of Service.
+            </p>
+        </form>
+    </div>
+</div>
+
+<!-- Background layers -->
+<div class="bg-img" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+
+<div class="wrap">
+    <header>
+        <a href="index.html" class="brand">
+            <img src="assets/images/logo.png" alt="SEM Spirits Logo" class="brand-logo">
+            <div>
+                <h1>SEM Spirits</h1>
+                <small>Premium Distribution</small>
+            </div>
+        </a>
+
+        <nav aria-label="Primary navigation">
+            <a class="pill" href="index.html#about">About</a>
+            <a class="pill" href="index.html#products">Products</a>
+            <a class="pill" href="index.html#trade">For Trade</a>
+            <a class="pill" href="inquiry.html">Request Account</a>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section class="page-hero">
+            <div class="kicker">
+                <span class="dot"></span>
+                <span>Legal & Compliance</span>
+            </div>
+            <h2>Policies that Support the Verified Trade Portal</h2>
+            <p>
+                SEM Spirits Distribution operates as a licensed B2B alcohol distributor. Our policies
+                are designed to meet federal and state regulations, protect partner data, and ensure
+                responsible commerce for Tarik Areke and future product lines.
+            </p>
+            <div class="legal-nav">
+                <a href="#terms">Terms of Service</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#compliance">Compliance</a>
+                <a href="inquiry.html" class="pill">Request Trade Access</a>
+            </div>
+        </section>
+
+        <section id="terms" class="legal-section">
+            <h3>Terms of Service</h3>
+            <p>
+                The SEM Spirits Verified Trade Portal is exclusively for licensed wholesalers, retailers,
+                restaurants/bars, distributors, and approved event venues. By requesting access, you agree
+                to the following requirements.
+            </p>
+            <div class="legal-grid">
+                <div class="legal-card">
+                    <h4>Account Eligibility</h4>
+                    <ul class="policy-list">
+                        <li>Applicants must provide a valid business license and state alcohol permit.</li>
+                        <li>Accounts are created manually after verification—self-service registration is disabled.</li>
+                        <li>Pricing and ordering privileges are tied to assigned roles (wholesaler, retailer, etc.).</li>
+                    </ul>
+                </div>
+                <div class="legal-card">
+                    <h4>Portal Usage</h4>
+                    <ul class="policy-list">
+                        <li>Login credentials are for the approved business entity only and may not be shared.</li>
+                        <li>All orders remain subject to manual review, territory restrictions, and volume caps.</li>
+                        <li>We reserve the right to suspend or terminate access for compliance violations.</li>
+                    </ul>
+                </div>
+                <div class="legal-card">
+                    <h4>Payment & Fulfillment</h4>
+                    <ul class="policy-list">
+                        <li>Payment terms are defined per account (credit card, ACH, or approved net terms).</li>
+                        <li>Orders may require adult signature on delivery as mandated by shipping carriers.</li>
+                        <li>Applicable taxes and state fees are calculated based on shipping destination.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="callout">
+                Questions about the Terms of Service? Email <a href="mailto:legal@semspirits.com">legal@semspirits.com</a>.
+                This summary is for quick reference; the full legal contract is sent during onboarding.
+            </div>
+        </section>
+
+        <section id="privacy" class="legal-section">
+            <h3>Privacy Policy</h3>
+            <p>
+                We collect only the information required to evaluate trade eligibility and to operate the portal.
+                Data is stored securely and never sold. The Mailchimp CRM described in the project documentation
+                functions as our pre-verification database.
+            </p>
+            <div class="legal-grid">
+                <div class="legal-card">
+                    <h4>Data We Collect</h4>
+                    <ul class="policy-list">
+                        <li>Contact details (name, email, phone) provided via the inquiry form.</li>
+                        <li>Business information (entity name, license numbers, state, business type).</li>
+                        <li>Interest flags (Tarik Areke interest, online ordering notifications, verification status).</li>
+                    </ul>
+                </div>
+                <div class="legal-card">
+                    <h4>How Data Is Used</h4>
+                    <ul class="policy-list">
+                        <li>Manual verification of licenses and permits.</li>
+                        <li>Account provisioning and compliance tracking.</li>
+                        <li>Operational communication (confirmation emails, status updates, compliance notices).</li>
+                    </ul>
+                </div>
+                <div class="legal-card">
+                    <h4>Your Rights</h4>
+                    <ul class="policy-list">
+                        <li>Request data export or deletion by emailing <a href="mailto:privacy@semspirits.com">privacy@semspirits.com</a>.</li>
+                        <li>Opt-out of marketing communications at any time via unsubscribe links.</li>
+                        <li>Update account information by contacting your SEM Spirits account manager.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="callout">
+                All data is processed within the United States. We honor state privacy laws (e.g., CCPA/CPRA) and
+                GDPR requests for EU partners as applicable.
+            </div>
+        </section>
+
+        <section id="compliance" class="legal-section">
+            <h3>Compliance & Responsible Distribution</h3>
+            <p>
+                SEM Spirits aligns operations with TTB (Alcohol and Tobacco Tax and Trade Bureau) guidance,
+                state Alcohol Beverage Control agencies, and responsible marketing practices.
+            </p>
+            <div class="legal-grid">
+                <div class="legal-card">
+                    <h4>Regulatory Controls</h4>
+                    <ul class="policy-list">
+                        <li>Age verification enforced site-wide and at checkout (Phase 3+).</li>
+                        <li>Role-based pricing prevents public disclosure of wholesale rates.</li>
+                        <li>Manual review ensures shipments only go to territories where we are licensed.</li>
+                    </ul>
+                </div>
+                <div class="legal-card">
+                    <h4>Trade Partner Responsibilities</h4>
+                    <ul class="policy-list">
+                        <li>Maintain valid licenses; notify SEM Spirits of any status changes.</li>
+                        <li>Adhere to state-specific resale and taxation rules.</li>
+                        <li>Promote responsible consumption and comply with local marketing restrictions.</li>
+                    </ul>
+                </div>
+                <div class="legal-card">
+                    <h4>Reporting & Support</h4>
+                    <ul class="policy-list">
+                        <li>Compliance issues can be reported confidentially to <a href="mailto:compliance@semspirits.com">compliance@semspirits.com</a>.</li>
+                        <li>We partner with legal counsel specializing in alcohol distribution for annual reviews.</li>
+                        <li>All incidents are logged in accordance with our internal risk management plan.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="callout">
+                Visit <a href="https://www.responsibility.org" target="_blank" rel="noopener">responsibility.org</a> for
+                education resources, and consult your local ABC office for region-specific regulations.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/images/logo.png" alt="SEM Spirits" class="footer-logo">
+                <div>
+                    <strong>SEM Spirits Distribution</strong>
+                    <small>Premium Ethiopian Spirits</small>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Trade Portal</h4>
+                    <ul>
+                        <li><a href="inquiry.html">Request Account</a></li>
+                        <li><a href="index.html#trade">Verification Process</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="legal.html#terms" aria-current="page">Terms of Service</a></li>
+                        <li><a href="legal.html#privacy">Privacy Policy</a></li>
+                        <li><a href="legal.html#compliance">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://www.responsibility.org" target="_blank">Responsible Drinking</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 SEM Spirits Distribution. All rights reserved.</p>
+            <p class="footer-disclaimer">
+                Must be 21+ to access this site. SEM Spirits promotes responsible drinking.
+            </p>
+        </div>
+    </footer>
+</div>
+
+<script src="js/agegate.js"></script>
+<script src="js/site.js"></script>
+
+</body>
+</html>

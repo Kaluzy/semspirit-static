@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEM Spirits Distribution | Premium Ethiopian Spirits</title>
+    <meta name="description" content="Official distributor of Tarik Areke and premium Ethiopian spirits. Verified trade portal for licensed wholesalers, retailers, and restaurants.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Age Gate Modal -->
+<div
+    id="sem-agegate"
+    class="agegate show"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="agegate-title"
+    aria-describedby="agegate-desc"
+    data-agegate="active"
+>
+    <div class="box" role="document">
+        <div class="kicker">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Age Verification Required</span>
+        </div>
+
+        <h3 id="agegate-title">You must be 21 or older to enter</h3>
+
+        <p id="agegate-desc">
+            This website contains information about alcohol products and is intended
+            for audiences of legal drinking age. Please confirm you are at least
+            21 years of age.
+        </p>
+
+        <form class="agegate-form" id="sem-agegate-form">
+            <div class="actions">
+                <button
+                    class="btn primary"
+                    type="button"
+                    id="agegate-confirm"
+                    onclick="confirmAge()"
+                >
+                    Yes, I am 21+
+                </button>
+                <button
+                    class="btn"
+                    type="button"
+                    id="agegate-deny"
+                    onclick="denyAge()"
+                >
+                    No, Exit Site
+                </button>
+            </div>
+
+            <p class="note">
+                By entering, you affirm you are of legal drinking age in your country
+                of residence and agree to our Terms of Service.
+            </p>
+        </form>
+    </div>
+</div>
+
+<!-- Background layers -->
+<div class="bg-img" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+
+<!-- Main content wrapper -->
+<div class="wrap">
+    <header>
+        <a href="index.html" class="brand">
+            <img src="assets/images/logo.png" alt="SEM Spirits Logo" class="brand-logo">
+            <div>
+                <h1>SEM Spirits</h1>
+                <small>Premium Distribution</small>
+            </div>
+        </a>
+
+        <nav aria-label="Primary navigation">
+            <a class="pill" href="#about">About</a>
+            <a class="pill" href="#products">Products</a>
+            <a class="pill" href="#trade">For Trade</a>
+            <a class="pill" href="inquiry.html">Request Account</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="kicker">
+                    <span class="dot"></span>
+                    <span>Official Distributor</span>
+                </div>
+                <h2>Premium Ethiopian Spirits<br>for Trade Partners</h2>
+                <p class="hero-lead">
+                    SEM Spirits Distribution is the official distributor of Tarik Areke
+                    and premium Ethiopian spirits. We partner with licensed wholesalers,
+                    retailers, and restaurants across the United States.
+                </p>
+                <div class="hero-actions">
+                    <a href="inquiry.html" class="btn primary">Request Trade Account</a>
+                    <a href="#products" class="btn">View Products</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Product Section -->
+        <section id="products" class="products-section">
+            <div class="section-header">
+                <div class="kicker">
+                    <span class="dot"></span>
+                    <span>Featured Product</span>
+                </div>
+                <h2>Tarik Areke</h2>
+                <p>Traditional Ethiopian Spirit</p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-gallery">
+                    <div class="gallery-container">
+                        <div class="gallery-images" id="galleryImages">
+                            <img src="images/tarik-areke-bottle.jpg" alt="Tarik Areke Ethiopian Spirit Bottle" class="gallery-image">
+                            <img src="images/tarik-areke-coffee.jpg" alt="Tarik Areke Coffee Flavor" class="gallery-image">
+                            <img src="images/tarik-areke-cinnamon.jpg" alt="Tarik Areke Cinnamon Reserve" class="gallery-image">
+                            <img src="images/tarik-areke-lifestyle-1.jpg" alt="Tarik Areke Lifestyle Setting" class="gallery-image">
+                            <img src="images/tarik-areke-lifestyle-2.jpg" alt="Tarik Areke Product Display" class="gallery-image">
+                        </div>
+                        <button class="gallery-btn prev" onclick="moveGallery(-1)" aria-label="Previous image">‹</button>
+                        <button class="gallery-btn next" onclick="moveGallery(1)" aria-label="Next image">›</button>
+                        <div class="gallery-indicators" id="galleryIndicators">
+                            <button class="gallery-indicator active" onclick="goToSlide(0)" aria-label="Go to image 1"></button>
+                            <button class="gallery-indicator" onclick="goToSlide(1)" aria-label="Go to image 2"></button>
+                            <button class="gallery-indicator" onclick="goToSlide(2)" aria-label="Go to image 3"></button>
+                            <button class="gallery-indicator" onclick="goToSlide(3)" aria-label="Go to image 4"></button>
+                            <button class="gallery-indicator" onclick="goToSlide(4)" aria-label="Go to image 5"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Tarik Areke</h3>
+                    <p class="product-origin">Traditional Ethiopian Spirit</p>
+
+                    <div class="product-details">
+                        <p>
+                            <strong>Heritage:</strong> Crafted using centuries-old traditions from Ethiopia,
+                            Tarik Areke embodies the rich cultural heritage of Ethiopian distilling.
+                        </p>
+                        <p>
+                            <strong>Profile:</strong> A distinctive spirit with authentic character and smoothness,
+                            perfect for discerning trade partners seeking unique offerings.
+                        </p>
+                    </div>
+
+                    <div class="product-pricing">
+                        <div class="pricing-notice">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm1 15H9v-2h2v2zm0-4H9V5h2v6z" fill="currentColor"/>
+                            </svg>
+                            <span>Pricing available to approved trade partners only</span>
+                        </div>
+                        <a href="inquiry.html" class="btn primary">Request Trade Account</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trade Partners Section -->
+        <section id="trade" class="trade-section">
+            <div class="section-header">
+                <div class="kicker">
+                    <span class="dot"></span>
+                    <span>Verified Trade Portal</span>
+                </div>
+                <h2>For Licensed Trade Partners</h2>
+                <p>SEM Spirits operates a verified trade portal for qualified businesses</p>
+            </div>
+
+            <div class="trade-grid">
+                <div class="trade-card">
+                    <div class="trade-icon">📋</div>
+                    <h3>1. Submit Inquiry</h3>
+                    <p>Complete our trade partner inquiry form with your business information and licensing details.</p>
+                </div>
+
+                <div class="trade-card">
+                    <div class="trade-icon">✓</div>
+                    <h3>2. Verification</h3>
+                    <p>Our team verifies your business license, permits, and credentials (typically 2-3 business days).</p>
+                </div>
+
+                <div class="trade-card">
+                    <div class="trade-icon">👤</div>
+                    <h3>3. Account Creation</h3>
+                    <p>Once approved, we'll create your trade account and send login credentials.</p>
+                </div>
+
+                <div class="trade-card">
+                    <div class="trade-icon">🛒</div>
+                    <h3>4. Place Orders</h3>
+                    <p>Access role-based pricing, place orders, and track your account activity online.</p>
+                </div>
+            </div>
+
+            <div class="trade-types">
+                <h3>We Partner With:</h3>
+                <ul>
+                    <li><strong>Wholesalers</strong> - Licensed distributors with valid permits</li>
+                    <li><strong>Retailers</strong> - Licensed liquor stores and off-premise sellers</li>
+                    <li><strong>Restaurants & Bars</strong> - On-premise establishments with alcohol licenses</li>
+                    <li><strong>Distributors</strong> - Authorized regional and national distributors</li>
+                    <li><strong>Event Venues</strong> - Licensed event spaces and catering services</li>
+                </ul>
+            </div>
+
+            <div class="trade-cta">
+                <a href="inquiry.html" class="btn primary">Request Trade Account</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <div class="kicker">
+                    <span class="dot"></span>
+                    <span>About SEM Spirits</span>
+                </div>
+                <h2>Premium Distribution Excellence</h2>
+            </div>
+
+            <div class="about-content">
+                <p>
+                    SEM Spirits Distribution is committed to bringing authentic, premium Ethiopian spirits
+                    to licensed trade partners across the United States. As the official distributor of
+                    Tarik Areke, we maintain the highest standards of quality, compliance, and service.
+                </p>
+                <p>
+                    Our verified trade portal ensures that only qualified, licensed businesses can access
+                    our products, maintaining legal compliance and protecting our brand partnerships.
+                </p>
+            </div>
+
+            <div class="about-values">
+                <div class="value-card">
+                    <h4>🏆 Authenticity</h4>
+                    <p>We represent genuine Ethiopian heritage and traditional craftsmanship</p>
+                </div>
+                <div class="value-card">
+                    <h4>✅ Compliance</h4>
+                    <p>Full adherence to state and federal alcohol distribution regulations</p>
+                </div>
+                <div class="value-card">
+                    <h4>🤝 Partnership</h4>
+                    <p>Dedicated support for our verified trade partners</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/images/logo.png" alt="SEM Spirits" class="footer-logo">
+                <div>
+                    <strong>SEM Spirits Distribution</strong>
+                    <small>Premium Ethiopian Spirits</small>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Trade Portal</h4>
+                    <ul>
+                        <li><a href="inquiry.html">Request Account</a></li>
+                        <li><a href="#trade">Verification Process</a></li>
+                        <li><a href="#products">Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="legal.html#terms">Terms of Service</a></li>
+                        <li><a href="legal.html#privacy">Privacy Policy</a></li>
+                        <li><a href="legal.html#compliance">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://www.responsibility.org" target="_blank">Responsible Drinking</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 SEM Spirits Distribution. All rights reserved.</p>
+            <p class="footer-disclaimer">
+                Must be 21+ to access this site. SEM Spirits promotes responsible drinking.
+            </p>
+        </div>
+    </footer>
+</div>
+
+<script src="js/agegate.js"></script>
+<script src="js/site.js"></script>
+
+</body>
+</html>
