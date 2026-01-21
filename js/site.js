@@ -78,7 +78,8 @@
     };
 
     window.denyAge = function() {
-        window.location.href = 'https://www.responsibility.org/';
+        // Simply dismiss the modal - no redirect
+        hideAgeGate();
     };
 
     // Product Gallery
